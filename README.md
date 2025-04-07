@@ -12,7 +12,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.24.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.94.1 |
 
 ## Modules
 
@@ -46,6 +46,7 @@
 | <a name="input_build_type"></a> [build\_type](#input\_build\_type) | Type of build environment to use for related builds. | `string` | `"LINUX_CONTAINER"` | no |
 | <a name="input_buildspec"></a> [buildspec](#input\_buildspec) | The build spec declaration to use for this build project's related builds. | `string` | `""` | no |
 | <a name="input_cache"></a> [cache](#input\_cache) | Cache configuration block. | <pre>object({<br>    type     = optional(string)       # Valid values: NO_CACHE, LOCAL, S3. Defaults to NO_CACHE.<br>    modes    = optional(list(string)) # Required when cache type is LOCAL<br>    location = optional(string)       # Required when cache type is S3<br>  })</pre> | `{}` | no |
+| <a name="input_cloudwatch_log_group"></a> [cloudwatch\_log\_group](#input\_cloudwatch\_log\_group) | Custom log group for CodeBuild Project | `string` | `null` | no |
 | <a name="input_create_service_role"></a> [create\_service\_role](#input\_create\_service\_role) | Create new IAM service role and policy if `true`. | `bool` | `true` | no |
 | <a name="input_description"></a> [description](#input\_description) | Short description of the project. | `string` | n/a | yes |
 | <a name="input_encryption_key_arn"></a> [encryption\_key\_arn](#input\_encryption\_key\_arn) | AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build project's build output artifacts. | `string` | `null` | no |

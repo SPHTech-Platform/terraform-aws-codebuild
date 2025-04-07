@@ -140,3 +140,9 @@ variable "additional_iam" {
   type        = list(any)
   default     = []
 }
+
+variable "cloudwatch_log_group" {
+  description = "Custom log group for CodeBuild Project"
+  type        = string
+  default     = null
+}
