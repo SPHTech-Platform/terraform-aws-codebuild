@@ -45,8 +45,8 @@ resource "aws_codebuild_project" "this" {
 
   logs_config {
     cloudwatch_logs {
-      group_name = var.cloudwatch_log_group != null ? var.cloudwatch_log_group : null
-      status = "ENABLED"
+      group_name = var.cloudwatch_log_group != null && var.cloudwatch_log_group != "" ? var.cloudwatch_log_group : null
+      status     = "ENABLED"
     }
   }
 }

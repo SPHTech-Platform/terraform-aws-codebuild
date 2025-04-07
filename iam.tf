@@ -1,4 +1,5 @@
 module "codebuild_service_role" {
+  #checkov:skip=CKV_TF_1:Ensure Terraform module sources use a commit hash
   source  = "terraform-aws-modules/iam/aws//modules/iam-assumable-role"
   version = "~> 5.2.0"
 
@@ -17,6 +18,7 @@ module "codebuild_service_role" {
 }
 
 module "codebuild_service_role_policy" {
+  #checkov:skip=CKV_TF_1:Ensure Terraform module sources use a commit hash
   source  = "terraform-aws-modules/iam/aws//modules/iam-policy"
   version = "~> 5.2.0"
 

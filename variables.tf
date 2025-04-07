@@ -143,6 +143,6 @@ variable "additional_iam" {
 
 variable "cloudwatch_log_group" {
   description = "Custom log group for CodeBuild Project"
-  type = string
-  default = null
+  type        = string
+  default     = null
 }
