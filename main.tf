@@ -42,4 +42,11 @@ resource "aws_codebuild_project" "this" {
     location            = var.source_location
     report_build_status = var.report_build_status
   }
+
+  logs_config {
+    cloudwatch_logs {
+      group_name = var.cloudwatch_log_group != null ? var.cloudwatch_log_group : null
+      status = "ENABLED"
+    }
+  }
 }
